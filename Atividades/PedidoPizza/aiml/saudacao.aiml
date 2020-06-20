@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	
+	<!-- SAUDAÇÃO -->
+	<category>
+	    <pattern>SAUDAÇÃO</pattern>
+	    <template>
+            <think>
+                <set name="pizza">false</set>
+                <set name="massa">false</set>
+                <set name="borda">false</set>
+                <set name="recheio">false</set>
+	            <set name="pedido">false</set>
+            </think> 
+        
+	        <random>
+	            <li>Olá, tudo bem? Seja bem-vindo!</li>
+	            <li>Oi. Seja bem-vindo! O que deseja?</li>
+	            <li>Olá. o que deseja?</li>
+	            <li>Oi! O que deseja? </li>
+	        </random>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>OI</pattern>
+	    <template>
+	        <srai>SAUDAÇÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>OLÁ</pattern>
+	    <template>
+	        <srai>SAUDAÇÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>OLA</pattern>
+	    <template>
+	        <srai>SAUDAÇÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>IAE</pattern>
+	    <template>
+	        <srai>SAUDAÇÃO</srai>
+	    </template>
+	</category>
+	
+</aiml>
