@@ -179,9 +179,11 @@
 	            <condition name="sm" value="sim">
 	                Pacote: <get name="pacote"></get><br></br>
 	                Transporte: Ônibus <br></br>
+
 	            </condition>
 	        </condition>
-	        Método de Pagamento: <get name="pagamento"></get>
+	        Método de Pagamento: <get name="pagamento"></get><br></br>
+	        <srai>RECOMENDACAOTURISMO</srai>
 	    </template>
 	</category>
 </aiml>
