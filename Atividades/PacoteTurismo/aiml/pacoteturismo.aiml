@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<category>
+	    <pattern>PACOTETURISMO</pattern>
+	    <template>
+	        <think><set name="viagem">true</set></think>
+	        Há pacotes de viagem para três diferentes cidades do Brasil!<br></br>
+	        Qual você deseja ir?
+	        <button>
+	            Aracaju
+	            <think><srai>CIDADEARACAJU</srai></think>
+	        </button>
+	        
+	        <button>
+	            Fortaleza
+	            <think><srai>CIDADEFORTALEZA</srai></think>
+	        </button>
+	        
+	        <button>
+	            Maceió
+	            <think><srai>CIDADEMACEIO</srai></think>
+	        </button>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>VIAJAR</pattern>
+	    <template>
+	        <srai>PACOTETURISMO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* VIAJAR</pattern>
+	    <template>
+	        <srai>PACOTETURISMO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>TURISMO</pattern>
+	    <template>
+	        <srai>PACOTETURISMO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* TURISMO</pattern>
+	    <template>
+	        <srai>PACOTETURISMO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>VIAGEM</pattern>
+	    <template>
+	        <srai>PACOTETURISMO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* VIAGEM</pattern>
+	    <template>
+	        <srai>PACOTETURISMO</srai>
+	    </template>
+	</category>
+	
+	
+	
+	
+		<!-- TRANSPORTE -->
+	<category>
+	    <pattern>ÔNIBUS</pattern>
+	    <template>
+	        <think><set name="transporte">ônibus</set></think>
+	        <srai>PAGAMENTO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* ÔNIBUS</pattern>
+	    <template>
+	        <srai>ÔNIBUS</srai>
+	    </template>
+	</category>
+	
+	
+	<category>
+	    <pattern>* ONIBUS</pattern>
+	    <template>
+	        <srai>ÔNIBUS</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* BUS</pattern>
+	    <template>
+	        <srai>ÔNIBUS</srai>
+	    </template>
+	</category>
+	
+	
+	<category>
+	    <pattern>ONIBUS</pattern>
+	    <template>
+	        <srai>ÔNIBUS</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>BUS</pattern>
+	    <template>
+	        <srai>ÔNIBUS</srai>
+	    </template>
+	</category>
+	
+	
+	<category>
+	    <pattern>AVIÃO</pattern>
+	    <template>
+	        <think><set name="transporte">avião</set></think>
+	        <srai>PAGAMENTO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>AVIAO</pattern>
+	    <template>
+	        <srai>AVIÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* AVIAO</pattern>
+	    <template>
+	        <srai>AVIÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* AVIÃO</pattern>
+	    <template>
+	        <srai>AVIÃO</srai>
+	    </template>
+	</category>
+	
+	
+	
+	
+	
+	<category>
+	    <pattern>PEDIDOFINALIZADOTURISMO</pattern>
+	    <template>
+	        COMPRA FINALIZADA!<br></br>
+	        Detalhes da compra:<br></br>
+	        Cidade: <get name="cidade"></get><br></br>
+	        
+	        <condition name="cidade" value="maceió">
+	            <condition name="sm" value="sim">
+	                Você conhece os pontos turísticos de Maceió. <br></br>
+	            </condition>
+	            
+	            <condition name="sm" value="não">
+	                Você não conhece os pontos turísticos de Maceió. <br></br>
+	            </condition>
+	            
+	            Pacote: <get name="pacote"></get><br></br>
+	        </condition>
+	        
+	        <condition name="cidade" value="fortaleza">
+	            <condition name="sm" value="sim">
+	                Pacote: Falésias Cearenses <br></br>
+	                Transporte: <get name="transporte"></get><br></br>
+	            </condition>
+	        </condition>
+	        
+	        <condition name="cidade" value="aracaju">
+	            <condition name="sm" value="sim">
+	                Pacote: <get name="pacote"></get><br></br>
+	                Transporte: Ônibus <br></br>
+	            </condition>
+	        </condition>
+	        Método de Pagamento: <get name="pagamento"></get>
+	    </template>
+	</category>
+</aiml>

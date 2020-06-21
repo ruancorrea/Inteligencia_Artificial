@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>
+        Ainda não entendo o que isso quer dizer.</template>
+  </category>
+  
+  <category>
+      <pattern>SAIR</pattern>
+      <template>
+          <random>
+              <li>É uma pena! Até mais</li>
+              <li>Agora fiquei triste. Até mais!</li>
+              <li>Aff! Até outra hora!</li>
+              <li>Adeus!</li>
+              <li>Me magoaste! Tchau</li>
+              <li>Falou!</li>
+          </random>
+      </template>
+  </category>
+</aiml>
