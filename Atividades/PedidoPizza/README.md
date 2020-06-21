@@ -11,8 +11,7 @@
 
 <p>Também foi utilizado a plataforma da IBM. O Assistente Watson<p><br>
 
-<a href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=58313e28-dabb-4b3c-a680-c32a20b3927d&serviceInstanceID=913eb8d8-c5eb-496e-ae86-05ed0ff605f5
-Save changes">Link da versão Watson</a><br><br>
+<a href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=58313e28-dabb-4b3c-a680-c32a20b3927d&serviceInstanceID=913eb8d8-c5eb-496e-ae86-05ed0ff605f5">Link da versão Watson</a><br><br>
 
 ### .AIML e PandoraBots (A.L.I.C.E)
 
