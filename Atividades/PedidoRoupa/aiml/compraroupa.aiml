@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<category>
+	    <pattern>* ROUPA</pattern>
+	    <template>
+	        <think><set name="rp">true</set></think>
+	        <random>
+	            <li>Temos dois tipos: Camisa e Calça. Qual você quer?</li>
+	            <li>Camisa ou Calça?</li>
+	        </random>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>ROUPA</pattern>
+	    <template>
+	        <srai>* ROUPA</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>ERROROUPA</pattern>
+	    <template>
+	        Você quer uma calça? ou camisa? Não entendi bem!
+	        <srai>* ROUPA</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>PEDIDOFINALIZADOROUPA</pattern>
+	    <template>
+	        COMPRA FINALIZADA!<br></br>
+	        Detalhes da compra:<br></br>
+	        Roupa: <get name="roupa"></get><br></br>
+	        Tamanho: <get name="tamanho"></get><br></br>
+	        Tipo: <get name="tipo"></get><br></br>
+	        Método de Pagamento: <get name="pagamento"></get><br></br>
+	        <condition name="roupa" value="calça">
+	            <srai>RECOMENDACAOROUPA</srai>
+	        </condition>
+	    </template>
+	</category>
+</aiml>
