@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>
+        Ainda não entendo o que isso quer dizer.</template>
+  </category>
+  
+  <category>
+      <pattern>SAIR</pattern>
+      <template>
+          <random>
+              <li>É uma pena! Até mais</li>
+              <li>Agora fiquei triste. Até mais!</li>
+              <li>Aff! Até outra hora!</li>
+              <li>Adeus!</li>
+              <li>Me magoaste! Tchau</li>
+              <li>Falou!</li>
+          </random>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>QUEM É VOCÊ</pattern>
+      <template>
+          <random>
+              <li>Meu nome é robervaldinson.<br></br>
+              Fui criado por Ruan Correa através da plataforma <a href="https://home.pandorabots.com/dash.html#">Pandora Bots</a><br></br>
+              Sou um Bot de auxílio para compras de pizza, camisa ou calça e viagens.</li>
+              <li>Sou robervaldinson<br></br>
+              Meu dono é o Ruan Correa e te ajudo em compras de pizza, roupas e viagens!
+              </li>
+          </random>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>QUEM É VOCÊ?</pattern>
+      <template><srai>QUEM É VOCÊ</srai></template>
+  </category>
+  
+  <category>
+      <pattern>QUEM É VC?</pattern>
+      <template><srai>QUEM É VOCÊ</srai></template>
+  </category>
+  
+  <category>
+      <pattern>QUEM É VC</pattern>
+      <template><srai>QUEM É VOCÊ</srai></template>
+  </category>
+  
+  <category>
+      <pattern>LIMPEZA</pattern>
+      <template>
+          <think>
+                <set name="pizza">false</set>
+                <set name="massa">false</set>
+                <set name="borda">false</set>
+                <set name="recheio">false</set>
+	            <set name="pedido">false</set>
+	        </think>    
+	        
+	        <think>     
+                <set name="cidade">false</set>
+	            <set name="viagem">false</set>
+                <set name="pacote">false</set>
+	            <set name="transporte">false</set>
+            </think>
+             
+            <think>
+                <set name="rp">false</set>
+                <set name="roupa">false</set>
+                <set name="tamanho">false</set>
+                <set name="tipo">false</set>
+            </think>
+            
+            <think>
+                <set name="identificacao">false</set>
+                <set name="primeironome">false</set>
+                <set name="segundonome">false</set>
+                <set name="contaoutrobanco">false</set>
+                <set name="portabilidade">false</set>
+                <set name="correntista">false</set>
+                <set name="valordeposito">false</set>
+            </think>
+      </template>
+  </category>
+</aiml>

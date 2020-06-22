@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	
+		<category>
+	    <pattern>SIM</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <think><set name="portabilidade">true</set></think>
+	        Digite o nome do correntista:
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>DESEJO SIM</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <srai>SIM</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* DESEJO</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <srai>SIM</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* DESEJO SIM</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <srai>SIM</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>NÃO</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <think><set name="portabilidade">false</set></think>
+	        Digite o nome do correntista:
+	    </template>
+	</category>
+	
+		<category>
+	    <pattern>* DESEJO NÃO</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <srai>NÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* DESEJO NAO</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <srai>NÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>NAO</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <srai>NÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* NÃO</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <srai>NÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* NAO</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <srai>NÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* NÃO *</pattern>
+	    <that>Deseja fazer portabilidade bancária</that>
+	    <template>
+	        <srai>NÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>*</pattern>
+	    <that>Digite o nome do correntista</that>
+	    <template>
+	        <think><set name="correntista"><star></star></set></think>
+	        <srai>DEPOSITOVALOR</srai>
+	    </template>
+	</category>
+</aiml>
