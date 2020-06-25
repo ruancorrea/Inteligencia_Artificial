@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
+<topic name="turismo">
 	<category>
 	    <pattern>RECOMENDACAOTURISMO</pattern>
 	    <template>
@@ -58,31 +59,7 @@
 	                </condition>
 	            </condition>
 	            
-	            <condition name="cidade" value="maceió">
-	                <condition name="pacote" value="Orla de Alagoas">
-	                    <condition name="pagamento" value="cartão de Crédito">
-	                        Recomendamos um passeio em Trancoso.
-	                    </condition>
-	                    <condition name="pagamento" value="cartão de Débito">
-	                        Recomendamos um passeio na Praia do Patacho.
-	                    </condition>
-	                    <condition name="pagamento" value="boleto bancário">
-	                        Recomendamos um passeio na Praia do Gunga.
-	                    </condition>
-	                </condition>
-	                
-	                <condition name="pacote" value="Nove Ilhas">
-	                    <condition name="pagamento" value="cartão de Crédito">
-	                        Recomendamos um passeio em Maragogi.
-	                    </condition>
-	                    <condition name="pagamento" value="cartão de Débito">
-	                        Recomendamos um passeio na Praia dos Carneiros.
-	                    </condition>
-	                    <condition name="pagamento" value="boleto bancário">
-	                        Recomendamos um passeio na Praia do Francês.
-	                    </condition>
-	                </condition>
-	            </condition><condition name="cidade" value="fortaleza">
+	            <condition name="cidade" value="fortaleza">
 	                    <condition name="pagamento" value="cartão de Crédito">
 	                        Recomendamos um passeio no Porto das Galinhas.
 	                    </condition>
@@ -97,4 +74,5 @@
 	        </condition>
 	    </template>
 	</category>
+</topic>
 </aiml>

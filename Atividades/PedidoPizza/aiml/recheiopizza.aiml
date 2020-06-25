@@ -3,6 +3,7 @@
 	<!-- insert your AIML categories here -->
 
 	<!-- ESCOLHENDO RECHEIO -->
+<topic name="pizza">
 	<category>
 	    <pattern>RECHEIO</pattern>
 	    <template>
@@ -99,7 +100,7 @@
 	    <pattern>CALABRESA</pattern>
 	    <template>
 	        <condition name="pizza" value="true">
-	            <think> 
+	            <think>
     	            <set name="recheio">calabresa</set>
     	        </think>
     	        <srai>PFGO</srai>
@@ -117,6 +118,7 @@
 	        <srai>CALABRESA</srai>
 	    </template>
 	</category>
-	
+
+</topic>
 	
 </aiml>

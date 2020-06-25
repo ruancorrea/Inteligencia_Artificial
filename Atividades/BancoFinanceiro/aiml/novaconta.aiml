@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
-		
+	
+<topic name="conta">	
 	<category>
 	    <pattern>*</pattern>
 	    <that>Digite uma identificação para sua conta</that>
@@ -39,4 +40,5 @@
 	        
 	    </template>
 	</category>
+</topic>
 </aiml>

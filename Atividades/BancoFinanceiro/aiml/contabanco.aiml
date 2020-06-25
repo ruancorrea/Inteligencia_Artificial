@@ -5,6 +5,7 @@
 	<category>
 	    <pattern>CONTA</pattern>
 	    <template>
+	        <think><set name="topic">conta</set></think>
 	        Então, vamos aos passos para abrir uma conta corrente no nosso banco IA!<br></br>
 	        Qual é o seu nome?
 	    </template>
@@ -30,7 +31,8 @@
 	        <srai>CONTA</srai>
 	    </template>
 	</category>
-	
+
+<topic name="conta">
 	<category>
 	    <pattern>SIM</pattern>
 	    <that>Você tem conta em outro banco</that>
@@ -115,6 +117,7 @@
 	    </template>
 	</category>
 	
+	
 	<category>
 	    <pattern>MEU NOME É * *</pattern>
 	    <that>Qual é o seu nome</that>
@@ -131,10 +134,10 @@
 	    <pattern>*</pattern>
 	    <that>Qual é o seu nome</that>
 	    <template>
-	        <think><set name="primeironome"><star index="0"></star></set></think>
+	        <think><set name="primeironome"><star></star></set></think>
 	        <think><set name="segundonome"> </set></think>
 	        
-	        Olá, <get name="primeironome"></get>!<br></br>
+	        Olá, <get name="primeironome"></get>.<br></br>
 	        <srai>BANCOOUTRO</srai>
 	    </template>
 	</category>
@@ -204,4 +207,5 @@
 	        <srai>RECOMENDACAOBANCO</srai>
 	    </template>
 	</category>
+</topic>
 </aiml>

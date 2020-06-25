@@ -21,6 +21,35 @@
   </category>
   
   <category>
+      <pattern>QUEM É VOCÊ</pattern>
+      <template>
+          <random>
+              <li>Meu nome é <bot name="name"></bot>.<br></br>
+              Fui criado por Ruan Correa através da plataforma <a href="https://home.pandorabots.com/dash.html#">Pandora Bots</a><br></br>
+              Sou um Bot de auxílio para compras de pizza, camisa ou calça,viagens ou até mesmo para abrir uma conta.</li>
+              <li>Sou <bot name="name"></bot><br></br>
+              Meu dono é o Ruan Correa e te ajudo em compras de pizza, roupas e viagens ou até mesmo para abrir uma conta!
+              </li>
+          </random>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>QUEM É VOCÊ?</pattern>
+      <template><srai>QUEM É VOCÊ</srai></template>
+  </category>
+  
+  <category>
+      <pattern>QUEM É VC?</pattern>
+      <template><srai>QUEM É VOCÊ</srai></template>
+  </category>
+  
+  <category>
+      <pattern>QUEM É VC</pattern>
+      <template><srai>QUEM É VOCÊ</srai></template>
+  </category>
+  
+  <category>
       <pattern>LIMPEZA</pattern>
       <template>
           <think>
@@ -36,7 +65,30 @@
 	            <set name="viagem">false</set>
                 <set name="pacote">false</set>
 	            <set name="transporte">false</set>
-            </think> 
+            </think>
+             
+            <think>
+                <set name="rp">false</set>
+                <set name="roupa">false</set>
+                <set name="tamanho">false</set>
+                <set name="tipo">false</set>
+            </think>
+            
+            <think>
+                <set name="identificacao">false</set>
+                <set name="primeironome">false</set>
+                <set name="segundonome">false</set>
+                <set name="contaoutrobanco">false</set>
+                <set name="portabilidade">false</set>
+                <set name="correntista">false</set>
+                <set name="valordeposito">false</set>
+            </think>
+            
+            <think>
+                <set name="pagamento">false</set>
+                <set name="topic">*</set>
+            </think>
       </template>
   </category>
+  
 </aiml>

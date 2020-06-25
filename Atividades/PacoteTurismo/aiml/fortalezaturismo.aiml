@@ -3,6 +3,8 @@
 	<!-- insert your AIML categories here -->
 	
 	<!-- FORTALEZA -->
+	
+<topic name="turismo">
 	<category>
 	    <pattern>CIDADEFORTALEZA</pattern>
 	    <template>
@@ -64,4 +66,6 @@
 	        </condition>
 	    </template> 
 	</category>
+
+</topic>
 </aiml>

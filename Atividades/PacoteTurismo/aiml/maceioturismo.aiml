@@ -3,6 +3,7 @@
 	<!-- insert your AIML categories here -->
 	<category>
 	    <pattern>CIDADEMACEIO</pattern>
+	    <topic name="turismo"></topic>
 	    <template> 
 	        <condition name="viagem" value="true">
 	            <think><set name="cidade">maceió</set></think>
@@ -74,7 +75,8 @@
 	
 	
 	
-	
+
+<topic name="turismo">
 	<category>
 	    <pattern>PACOTEMACEIO</pattern>
 	    <template>
@@ -153,7 +155,7 @@
 	            <think>
 	                <set name="pacote">Orla de Maceió</set>
 	            </think>
-	            <think><srai>PAGAMENTO</srai></think>
+	            <srai>PAGAMENTO</srai>
 	        </condition>
 	    </template>
 	</category>
@@ -209,7 +211,7 @@
 	        </condition>
 	        
 	        <condition name="cidade" value="aracaju">
-	            aaaaaaaaa
+	            <srai>ORLAARACAJU</srai>
 	        </condition>
 	    </template>
 	</category>
@@ -222,10 +224,23 @@
 	        </condition>
 	        
 	        <condition name="cidade" value="aracaju">
+	            <srai>ORLAARACAJU</srai>
+	        </condition>
+	    </template>
+	</category>
+	
+		<category>
+	    <pattern>* ORLA *</pattern>
+	    <template>
+	        <condition name="cidade" value="maceió">
+	            <srai>ORLAMACEIÓ</srai>
+	        </condition>
+	        
+	        <condition name="cidade" value="aracaju">
 	            aaaaaaaa
 	        </condition>
 	    </template>
 	</category>
 	
-	
+</topic>	
 </aiml>

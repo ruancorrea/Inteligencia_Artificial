@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
-	
+<topic name="roupa">
 	<category>
 	    <pattern>RECOMENDACAOROUPA</pattern>
 	    <template>
@@ -9,15 +9,15 @@
 	            <condition name="roupa" value="calça">
 	                <condition name="tamanho" value="34">
 	                    <condition name="tipo" value="skinny fit">
-	                        Recomendamosa marca Calvin Klein.
+	                        Recomendamos a marca Calvin Klein.
 	                    </condition>
 	                    
 	                    <condition name="tipo" value="slim fit">
-	                        Recomendamosa marca Levi.
+	                        Recomendamos a marca Levi.
 	                    </condition>
 	                    
 	                    <condition name="tipo" value="regular fit">
-	                        Recomendamosa marca Diesel.
+	                        Recomendamos a marca Diesel.
 	                    </condition>
 	                </condition>
 	                
@@ -27,7 +27,7 @@
 	                    </condition>
 	                    
 	                    <condition name="tipo" value="slim fit">
-	                        Recomendamosa marca Giorgio Armani.
+	                        Recomendamos a marca Giorgio Armani.
 	                    </condition>
 	                    
 	                    <condition name="tipo" value="regular fit">
@@ -53,4 +53,5 @@
 	        </condition>
 	    </template>
 	</category>
+</topic>
 </aiml>

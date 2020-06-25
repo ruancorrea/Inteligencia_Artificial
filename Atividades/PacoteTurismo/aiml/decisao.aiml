@@ -4,6 +4,7 @@
 	
 	<category>
 	    <pattern>SIM</pattern>
+	    <topic name="turismo"></topic>
 	    <template>
 	        <think>
 	            <set name="sm">sim</set>
@@ -66,6 +67,7 @@
 	
 	<category>
 	    <pattern>NÃO</pattern>
+	    <topic name="turismo"></topic>
 	    <template>
 	        <think>
 	            <set name="sm">não</set>

@@ -2,7 +2,7 @@
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
 	
-	
+<topic name="pizza">
 	<!-- BORDA -->
 	<category>
 	    <pattern>BORDA</pattern>
@@ -26,6 +26,7 @@
 	<!-- ESCOLHENDO BORDA CHEDDAR-->
 	<category>
 	    <pattern>* CHEDDAR</pattern>
+	    <that>Nessa opção temos dois tipos de borda LT BUTTON GT CHEDDAR LT SLASH BUTTON GT LT BUTTON GT GORGONZOLA LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="massa" value="pan">
                 <think>
@@ -42,7 +43,6 @@
                 É preciso escolher um tipo de massa!
                 <srai>* PIZZA</srai>
 	        </condition>
-	        
 	        
 	    </template>
 	</category>
@@ -72,6 +72,7 @@
 	<!-- BORDA GORGONZOLA -->
 	<category>
 	    <pattern>* GORGONZOLA</pattern>
+	    <that>Nessa opção temos dois tipos de borda LT BUTTON GT CHEDDAR LT SLASH BUTTON GT LT BUTTON GT GORGONZOLA LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="massa" value="pan">
                 <think>
@@ -107,4 +108,5 @@
 	        <srai>* GORGONZOLA</srai>
 	    </template>
 	</category>
+</topic>
 </aiml>

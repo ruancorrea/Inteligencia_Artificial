@@ -4,8 +4,9 @@
 	
 	<!-- INICIANDO PEDIDO -->
 	<category>
-	    <pattern>* PIZZA</pattern>
+	    <pattern>* pizza</pattern>
 	    <template>
+	        <think><set name="topic">pizza</set></think>
 	        <think>
 	            <set name="pizza">true</set>
 	            <set name="pedido">false</set>
@@ -31,6 +32,7 @@
 	
 	<category>
 	    <pattern>FALSEPIZZAFALSE</pattern>
+	    <topic name="pizza"></topic>
 	    <template>
 	         Não entendi! No caso é uma pizza? Escolha, por favor!<br></br>
 	        <srai>* PIZZA</srai>
@@ -39,6 +41,7 @@
 	
 	
 	<!-- ESCOLHENDO OPÇÃO FINA -->
+<topic name="pizza">
 	<category>
 	    <pattern>FINA</pattern>
 	    <template>
@@ -116,4 +119,5 @@
 	        </condition>
 	    </template>
 	</category>
+	</topic>
 </aiml>

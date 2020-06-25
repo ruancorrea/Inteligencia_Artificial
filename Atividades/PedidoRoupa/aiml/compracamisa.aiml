@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
+<topic name="roupa">
 	<category>
 	    <pattern>CAMISA</pattern>
 	    <template>
@@ -38,6 +39,7 @@
 	
 	<category>
 	    <pattern>P</pattern>
+	    <that>LT BUTTON GT P LT SLASH BUTTON GT LT BUTTON GT M LT SLASH BUTTON GT LT BUTTON GT G LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="camisa">
 	            <think><set name="tamanho">P</set></think>
@@ -74,6 +76,7 @@
 	
 	<category>
 	    <pattern>M</pattern>
+	    <that>LT BUTTON GT P LT SLASH BUTTON GT LT BUTTON GT M LT SLASH BUTTON GT LT BUTTON GT G LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="camisa">
 	            <think><set name="tamanho">M</set></think>
@@ -110,6 +113,7 @@
 	
 	<category>
 	    <pattern>G</pattern>
+	    <that>LT BUTTON GT P LT SLASH BUTTON GT LT BUTTON GT M LT SLASH BUTTON GT LT BUTTON GT G LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="camisa">
 	            <think><set name="tamanho">G</set></think>
@@ -147,6 +151,7 @@
 	
 	<category>
 	    <pattern>V</pattern>
+	    <that>PARA A GOLA, TEMOS TRÊS FORMATOS DISPONÍVEIS LT BUTTON GT V LT SLASH BUTTON GT LT BUTTON GT REDONDA LT SLASH BUTTON GT LT BUTTON GT POLO LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="camisa">
 	            <think><set name="tipo">gola V</set></think>
@@ -180,6 +185,7 @@
 	
 	<category>
 	    <pattern>POLO</pattern>
+	    <that>PARA A GOLA, TEMOS TRÊS FORMATOS DISPONÍVEIS LT BUTTON GT V LT SLASH BUTTON GT LT BUTTON GT REDONDA LT SLASH BUTTON GT LT BUTTON GT POLO LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="camisa">
 	            <think><set name="tipo">gola Polo</set></think>
@@ -215,6 +221,7 @@
 	
 	<category>
 	    <pattern>REDONDA</pattern>
+        <that>PARA A GOLA, TEMOS TRÊS FORMATOS DISPONÍVEIS LT BUTTON GT V LT SLASH BUTTON GT LT BUTTON GT REDONDA LT SLASH BUTTON GT LT BUTTON GT POLO LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="camisa">
 	            <think><set name="tipo">gola Redonda</set></think>
@@ -247,4 +254,5 @@
 	        <srai>REDONDA</srai>
 	    </template>
 	</category>
+</topic>
 </aiml>

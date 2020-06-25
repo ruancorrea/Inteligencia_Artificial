@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
+<topic name="roupa">
 	<category>
 	    <pattern>CALÇA</pattern>
 	    <template>
@@ -46,6 +47,7 @@
 	
 	<category>
 	    <pattern>34</pattern>
+	    <that>LT BUTTON GT 34 LT SLASH BUTTON GT LT BUTTON GT 35 LT SLASH BUTTON GT LT BUTTON GT 36 LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="calça">
     	        <think><set name="tamanho">34</set></think>
@@ -67,6 +69,7 @@
 	
 	<category>
 	    <pattern>35</pattern>
+	    <that>LT BUTTON GT 34 LT SLASH BUTTON GT LT BUTTON GT 35 LT SLASH BUTTON GT LT BUTTON GT 36 LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="calça">
     	        <think><set name="tamanho">35</set></think>
@@ -88,6 +91,7 @@
 	
 	<category>
 	    <pattern>36</pattern>
+	    <that>LT BUTTON GT 34 LT SLASH BUTTON GT LT BUTTON GT 35 LT SLASH BUTTON GT LT BUTTON GT 36 LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="calça">
 	            <think><set name="tamanho">36</set></think>
@@ -145,6 +149,7 @@
 	
 	<category>
 	    <pattern>SKINNY</pattern>
+	    <that>TEMOS TRÊS FORMATOS DISPONÍVEIS LT BUTTON GT SKINNY FIT LT SLASH BUTTON GT LT BUTTON GT SLIM FIT LT SLASH BUTTON GT LT BUTTON GT REGULAR FIT LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="calça">
 	            <think><set name="tipo">skinny fit</set></think>
@@ -263,6 +268,7 @@
 	
 	<category>
 	    <pattern>SLIM</pattern>
+	    <that>TEMOS TRÊS FORMATOS DISPONÍVEIS LT BUTTON GT SKINNY FIT LT SLASH BUTTON GT LT BUTTON GT SLIM FIT LT SLASH BUTTON GT LT BUTTON GT REGULAR FIT LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="calça">
 	            <think><set name="tipo">slim fit</set></think>
@@ -293,6 +299,7 @@
 	
 	<category>
 	    <pattern>REGULAR</pattern>
+	    <that>TEMOS TRÊS FORMATOS DISPONÍVEIS LT BUTTON GT SKINNY FIT LT SLASH BUTTON GT LT BUTTON GT SLIM FIT LT SLASH BUTTON GT LT BUTTON GT REGULAR FIT LT SLASH BUTTON GT</that>
 	    <template>
 	        <condition name="roupa" value="calça">
 	            <think><set name="tipo">regular fit</set></think>
@@ -325,6 +332,6 @@
 	        <srai>REGULAR</srai>
 	    </template>
 	</category>
-	
+</topic>
 	
 </aiml>

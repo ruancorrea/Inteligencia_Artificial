@@ -5,6 +5,7 @@
 	    <pattern>* ROUPA</pattern>
 	    <template>
 	        <think><set name="rp">true</set></think>
+	        <think><set name="topic">roupa</set></think>
 	        <random>
 	            <li>Temos dois tipos: Camisa e Calça. Qual você quer?</li>
 	            <li>Camisa ou Calça?</li>
@@ -26,7 +27,8 @@
 	        <srai>* ROUPA</srai>
 	    </template>
 	</category>
-	
+
+<topic name="roupa">
 	<category>
 	    <pattern>PEDIDOFINALIZADOROUPA</pattern>
 	    <template>
@@ -41,4 +43,5 @@
 	        </condition>
 	    </template>
 	</category>
+</topic>
 </aiml>

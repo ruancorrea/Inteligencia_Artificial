@@ -3,6 +3,8 @@
 	<!-- insert your AIML categories here -->
 	
 	<!-- ARACAJU -->
+	
+<topic name="turismo">
 	<category>
 	    <pattern>CIDADEARACAJU</pattern>
 	    <template>
@@ -150,4 +152,5 @@
 	        <srai>ORLAARACAJU</srai>
 	    </template>
 	</category>
+</topic>
 </aiml>

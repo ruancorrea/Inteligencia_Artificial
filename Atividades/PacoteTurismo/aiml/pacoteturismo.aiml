@@ -5,6 +5,7 @@
 	    <pattern>PACOTETURISMO</pattern>
 	    <template>
 	        <think><set name="viagem">true</set></think>
+	        <think><set name="topic">turismo</set></think>
 	        Há pacotes de viagem para três diferentes cidades do Brasil!<br></br>
 	        Qual você deseja ir?
 	        <button>
@@ -70,8 +71,11 @@
 	
 	
 		<!-- TRANSPORTE -->
+
+<topic name="turismo">
 	<category>
 	    <pattern>ÔNIBUS</pattern>
+	    <that>LT BUTTON GT ÔNIBUS LT SLASH BUTTON GT LT BUTTON GT AVIÃO LT SLASH BUTTON GT</that>
 	    <template>
 	        <think><set name="transporte">ônibus</set></think>
 	        <srai>PAGAMENTO</srai>
@@ -118,6 +122,7 @@
 	
 	<category>
 	    <pattern>AVIÃO</pattern>
+	    <that>LT BUTTON GT ÔNIBUS LT SLASH BUTTON GT LT BUTTON GT AVIÃO LT SLASH BUTTON GT</that>
 	    <template>
 	        <think><set name="transporte">avião</set></think>
 	        <srai>PAGAMENTO</srai>
@@ -186,4 +191,5 @@
 	        <srai>RECOMENDACAOTURISMO</srai>
 	    </template>
 	</category>
+</topic>
 </aiml>

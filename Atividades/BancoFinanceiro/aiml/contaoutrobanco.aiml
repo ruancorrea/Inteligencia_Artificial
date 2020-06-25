@@ -2,7 +2,8 @@
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
 	
-		<category>
+<topic name="conta">
+	<category>
 	    <pattern>SIM</pattern>
 	    <that>Deseja fazer portabilidade bancária</that>
 	    <template>
@@ -44,7 +45,7 @@
 	    </template>
 	</category>
 	
-		<category>
+	<category>
 	    <pattern>* DESEJO NÃO</pattern>
 	    <that>Deseja fazer portabilidade bancária</that>
 	    <template>
@@ -62,6 +63,7 @@
 	
 	<category>
 	    <pattern>NAO</pattern>
+	    <topic name="conta"></topic>
 	    <that>Deseja fazer portabilidade bancária</that>
 	    <template>
 	        <srai>NÃO</srai>
@@ -100,4 +102,5 @@
 	        <srai>DEPOSITOVALOR</srai>
 	    </template>
 	</category>
+</topic>
 </aiml>
