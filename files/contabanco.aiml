@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	
+	<category>
+	    <pattern>CONTA</pattern>
+	    <template>
+	        <think><set name="topic">conta</set></think>
+	        Então, vamos aos passos para abrir uma conta corrente no nosso banco IA!<br></br>
+	        Qual é o seu nome?
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* CONTA</pattern>
+	    <template>
+	        <srai>CONTA</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* BANCO *</pattern>
+	    <template>
+	        <srai>CONTA</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* CONTA *</pattern>
+	    <template>
+	        <srai>CONTA</srai>
+	    </template>
+	</category>
+
+<topic name="conta">
+	<category>
+	    <pattern>SIM</pattern>
+	    <that>Você tem conta em outro banco</that>
+	    <template>
+	        <think><set name="contaoutrobanco">true</set></think>
+	        Deseja fazer portabilidade bancária?
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>TENHO</pattern>
+	    <that>Você tem conta em outro banco</that>
+	    <template>
+	        <srai>SIM</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>TENHO SIM</pattern>
+	    <that>Você tem conta em outro banco</that>
+	    <template>
+	        <srai>SIM</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* TENHO SIM</pattern>
+	    <that>Você tem conta em outro banco</that>
+	    <template>
+	        <srai>SIM</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>NÃO</pattern>
+	    <that>Você tem conta em outro banco</that>
+	    <template>
+	        <think><set name="contaoutrobanco">false</set></think>
+	        Digite uma identificação para sua conta:
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* NÃO TENHO</pattern>
+	    <that>Você tem conta em outro banco</that>
+	    <template>
+	        <srai>NÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* NAO TENHO</pattern>
+	    <that>Você tem conta em outro banco</that>
+	    <template>
+	        <srai>NÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* NÃO</pattern>
+	    <that>Você tem conta em outro banco</that>
+	    <template>
+	        <srai>NÃO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>NAO</pattern>
+	    <that>Você tem conta em outro banco</that>
+	    <template>
+	        <srai>NÃO</srai>
+	    </template>
+	</category>
+	
+
+	
+	
+	<category>
+	    <pattern>BANCOOUTRO</pattern>
+	    <template>
+	        Você tem conta em outro banco?
+	    </template>
+	</category>
+	
+	
+	<category>
+	    <pattern>MEU NOME É * *</pattern>
+	    <that>Qual é o seu nome</that>
+	    <template>
+	        <think><set name="primeironome"><star index="1"></star></set></think>
+	        <think><set name="segundonome"><star index="2"></star></set></think>
+	        
+	        Olá, <get name="primeironome"></get>!<br></br>
+	        <srai>BANCOOUTRO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>*</pattern>
+	    <that>Qual é o seu nome</that>
+	    <template>
+	        <think><set name="primeironome"><star></star></set></think>
+	        <think><set name="segundonome"> </set></think>
+	        
+	        Olá, <get name="primeironome"></get>.<br></br>
+	        <srai>BANCOOUTRO</srai>
+	    </template>
+	</category>
+	
+	
+	
+	<category>
+	    <pattern>DEPOSITOVALOR</pattern>
+	    <template>
+	        Digite o valor que deseja depositar
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>*</pattern>
+	    <that>Digite o valor que deseja depositar</that>
+	    <template>
+	        <think><set name="valordeposito"><star></star></set></think>
+	        <srai>EMPRESTIMOVALOR</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>EMPRESTIMOVALOR</pattern>
+	    <template>
+	        Caso queira fazer algum empréstimo, digite o valor. Caso não queira digite 0
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>*</pattern>
+	    <that>
+	        Caso não queira digite 0
+	    </that>
+	    <template>
+	        <think><set name="emprestimo"><star></star></set></think>
+	        <srai>FINALIZADOPROCESSO</srai>    
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>FINALIZADOPROCESSO</pattern>
+	    <template>
+	        Finalizamos, então tal pedido!<br></br>
+	        DETALHES<br></br>
+	        Nome: <get name="primeironome"></get> <get name="segundonome"></get><br></br>
+	        <condition name="contaoutrobanco" value="true">
+	            
+	            <condition name="portabilidade" value="true">
+	                Deseja fazer portabilidade bancária<br></br>
+	            </condition>
+	            
+	            <condition name="portabilidade" value="false">
+	                Não deseja fazer portabilidade bancária<br></br>
+	            </condition>
+	            
+                Correntista: <get name="correntista"></get><br></br>
+	        </condition>
+	        
+	        <condition name="contaoutrobanco" value="false">
+	            Identificação: <get name="identificacao"></get><br></br>
+	        </condition>
+	        
+	        Valor depósito:<get name="valordeposito"></get><br></br>
+	        Empréstimo: <get name="emprestimo"></get><br></br>
+	        
+	        <srai>RECOMENDACAOBANCO</srai>
+	    </template>
+	</category>
+</topic>
+</aiml>

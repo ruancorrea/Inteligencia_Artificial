@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+
+	<!-- ESCOLHENDO RECHEIO -->
+<topic name="pizza">
+	<category>
+	    <pattern>RECHEIO</pattern>
+	    <template>
+	        <condition name="pizza" value="true">
+    	        Nessa opção temos três recheios disponiveis
+    	        <button>
+    	            Queijo
+    	            <think><srai>QUEIJO</srai></think>
+    	        </button>
+    	        
+    	        <button>
+    	            Bacon
+    	            <think><srai>BACON</srai></think>
+    	        </button>
+    	        
+    	        <button>
+    	            Calabresa
+    	            <think><srai>CALABRESA</srai></think>
+    	        </button>
+    	    </condition>
+    	    
+    	    <condition name="pizza" value="false">
+    	        <srai>FALSEPIZZAFALSE</srai>
+    	    </condition>
+	    </template>
+	</category>
+	
+	<!-- RECHEIO QUEIJO -->
+	<category>
+	    <pattern>QUEIJO</pattern>
+	    <template>
+	        <condition name="pizza" value="true">
+	            <think>
+    	            <set name="recheio">queijo</set>
+    	        </think>
+    	        <srai>PFGO</srai>
+	        </condition>
+	        
+	        <condition name="pizza" value="false">
+	            <srai>FALSEPIZZAFALSE</srai>
+	        </condition>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* QUEIJO</pattern>
+	    <template>
+	        <srai>QUEIJO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* QJO</pattern>
+	    <template>
+	        <srai>QUEIJO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>QJO</pattern>
+	    <template>
+	        <srai>QUEIJO</srai>
+	    </template>
+	</category>
+	
+	
+	<!-- RECHEIO BACON -->
+	<category>
+	    <pattern>BACON</pattern>
+	    <template>
+	        <condition name="pizza" value="true">
+	            <think>
+    	            <set name="recheio">bacon</set>
+    	        </think>
+    	        <srai>PFGO</srai>
+	        </condition>
+	        
+	        <condition name="pizza" value="false">
+	            <srai>FALSEPIZZAFALSE</srai>
+	        </condition>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* BACON</pattern>
+	    <template>
+	        <srai>BACON</srai>
+	    </template>
+	</category>
+	
+	
+	<!-- RECHEIO CALABRESA -->
+	<category>
+	    <pattern>CALABRESA</pattern>
+	    <template>
+	        <condition name="pizza" value="true">
+	            <think>
+    	            <set name="recheio">calabresa</set>
+    	        </think>
+    	        <srai>PFGO</srai>
+	        </condition>
+	        
+	        <condition name="pizza" value="false">
+	            <srai>FALSEPIZZAFALSE</srai>
+	        </condition>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* CALABRESA</pattern>
+	    <template>
+	        <srai>CALABRESA</srai>
+	    </template>
+	</category>
+
+</topic>
+	
+</aiml>

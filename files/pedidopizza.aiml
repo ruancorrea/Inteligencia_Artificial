@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	
+	<!-- INICIANDO PEDIDO -->
+	<category>
+	    <pattern>* pizza</pattern>
+	    <template>
+	        <think><set name="topic">pizza</set></think>
+	        <think>
+	            <set name="pizza">true</set>
+	            <set name="pedido">false</set>
+	        </think>
+	        Há dois tipos de massa
+	        <button>
+	            Fina
+	            <think><srai>FINA</srai></think>
+	        </button>
+	        <button>
+	            Pan
+    	        <think><srai>* PAN</srai></think>
+	            </button>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>PIZZA</pattern>
+	    <template>
+	        <srai>* PIZZA</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>FALSEPIZZAFALSE</pattern>
+	    <topic name="pizza"></topic>
+	    <template>
+	         Não entendi! No caso é uma pizza? Escolha, por favor!<br></br>
+	        <srai>* PIZZA</srai>
+	    </template>
+	</category>
+	
+	
+	<!-- ESCOLHENDO OPÇÃO FINA -->
+<topic name="pizza">
+	<category>
+	    <pattern>FINA</pattern>
+	    <template>
+	        <condition name="pizza" value="true">
+	             <think>
+    	            <set name="massa">fina</set>
+    	        </think>
+    	        <srai>RECHEIO</srai>
+	        </condition>
+	        
+	        <condition name="pizza" value="false">
+    	        <srai>FALSEPIZZAFALSE</srai>
+    	    </condition>
+	    </template>
+	</category>
+	
+	
+	<!-- ESCOLHENDO OPÇÃO PAN -->
+	<category>
+	    <pattern>* PAN</pattern>
+	    <template>
+	        <condition name="pizza" value="true">
+    	        <think>
+    	            <set name="massa">pan</set>
+    	        </think>
+    	        <srai>BORDA</srai>
+    	    </condition>
+    	    
+    	    <condition name="pizza" value="false">
+    	        <srai>FALSEPIZZAFALSE</srai>
+    	    </condition>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>PAN</pattern>
+	    <template>
+	        <srai>* PAN</srai>
+	    </template> 
+	</category>
+	
+	
+	
+	<!-- VERIFICANDO PEDIDO -->
+	<category>
+	    <pattern>PFGO</pattern>
+	    <template>
+	        <condition name="massa" value="false">
+	            Falta escolher o tipo de massa!
+	            <srai>* PIZZA</srai>
+	        </condition>
+	        
+	        <condition name="recheio" value="false">
+	            Falta escolher o tipo de recheio!
+	            <srai>RECHEIO</srai>
+	        </condition>
+	        
+            <think><set name="pedido">true</set></think>
+            <srai>PFGOPIZZA</srai>
+	    </template>
+	</category>
+	
+	
+	<!-- FINALIZADO -->
+	<category>
+	    <pattern>PFGOPIZZA</pattern>
+	    <template>
+	        <condition name="pedido" value="true">
+	            Pedido finalizado:<br></br>
+	            Uma pizza <get name="massa"></get> <br></br>
+	            <condition name="massa" value="pan">
+	                Com borda <get name="borda"></get> <br></br>
+	            </condition>
+	            Com recheio de <get name="recheio"></get>
+	        </condition>
+	    </template>
+	</category>
+	</topic>
+</aiml>

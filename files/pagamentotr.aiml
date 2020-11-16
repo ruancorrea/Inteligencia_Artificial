@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+		<category>
+	    <pattern>PAGAMENTO</pattern>
+	    <template>
+	        <condition name="viagem" value="true">
+    	        <condition name="cidade" value="false">
+    	            É preciso de detalhes
+    	            <srai>PACOTETURISMO</srai>
+    	        </condition>
+    	        
+    	        <condition name="pacote" value="false">
+    	            É preciso de detalhes
+    	            <srai>PACOTETURISMO</srai>
+    	        </condition>
+	        </condition>
+	        
+	        <condition name="rp" value="true">
+	            <condition name="roupa" value="false">
+    	            É preciso de detalhes
+    	            <srai>* ROUPA</srai>
+    	        </condition>
+	            
+    	        <condition name="tamanho" value="false">
+    	            É preciso de detalhes
+    	            <srai>* ROUPA</srai>
+    	        </condition>
+    	        
+    	        <condition name="tipo" value="false">
+    	            É preciso de detalhes
+    	            <srai>* ROUPA</srai>
+    	        </condition>
+	        </condition>
+	        
+	        
+	        <think><set name="finalizado">true</set></think>
+	        
+	        Para finalizar o pedido é necessário a escolha do método de pagamento:
+	        
+	        <button>
+	            Cartão de Crédito
+	        </button>
+	        
+	        <button>
+	            Cartão de Débito
+	        </button>
+	        
+	        <button>
+	            Boleto Bancário
+	        </button>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* PAGAMENTO</pattern>
+	    <template>
+	        <think><srai>PAGAMENTO</srai></think>
+	    </template>
+	</category>
+
+
+
+    <category>
+        <pattern>CARTÃODECRÉDITO</pattern>
+        <template>
+            <condition name="finalizado" value="true">
+                <think><set name="pagamento">cartão de crédito</set></think>
+                <condition name="viagem" value="true">
+                    <srai>PEDIDOFINALIZADOTURISMO</srai>
+                </condition>
+                
+                <condition name="rp" value="true">
+                    <srai>PEDIDOFINALIZADOROUPA</srai>
+                </condition>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>CRÉDITO</pattern>
+        <template>
+            <srai>CARTÃODECRÉDITO</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>CREDITO</pattern>
+        <template>
+            <srai>CARTÃODECRÉDITO</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* CRÉDITO</pattern>
+        <template>
+            <srai>CARTÃODECRÉDITO</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* CREDITO</pattern>
+        <template>
+            <srai>CARTÃODECRÉDITO</srai>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>CARTÃODEDÉBITO</pattern>
+        <template>
+            <condition name="finalizado" value="true">
+                <think><set name="pagamento">cartão de débito</set></think>
+                <condition name="viagem" value="true">
+                    <srai>PEDIDOFINALIZADOTURISMO</srai>
+                </condition>
+                
+                <condition name="rp" value="true">
+                    <srai>PEDIDOFINALIZADOROUPA</srai>
+                </condition>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>DÉBITO</pattern>
+        <template>
+            <srai>CARTÃODEDÉBITO</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* DÉBITO</pattern>
+        <template>
+            <srai>CARTÃODEDÉBITO</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* DEBITO</pattern>
+        <template>
+            <srai>CARTÃODEDÉBITO</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>DEBITO</pattern>
+        <template>
+            <srai>CARTÃODEDÉBITO</srai>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>BOLETOBANCÁRIO</pattern>
+        <template>
+            <condition name="finalizado" value="true">
+                <think><set name="pagamento">boleto bancário</set></think>
+                
+                <condition name="viagem" value="true">
+                    <srai>PEDIDOFINALIZADOTURISMO</srai>
+                </condition>
+                
+                <condition name="rp" value="true">
+                    <srai>PEDIDOFINALIZADOROUPA</srai>
+                </condition>
+            </condition>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>BOLETO</pattern>
+        <template>
+            <srai>BOLETOBANCÁRIO</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>BOLETO *</pattern>
+        <template>
+            <srai>BOLETOBANCÁRIO</srai>
+        </template>
+    </category>
+
+    
+
+</aiml>

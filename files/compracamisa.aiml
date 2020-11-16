@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+<topic name="roupa">
+	<category>
+	    <pattern>CAMISA</pattern>
+	    <template>
+	        <think><set name="rp">true</set></think>
+	        <think><set name="roupa">camisa</set></think>
+	        Qual o tamanho da Camisa?
+	        
+	        <button>
+	            P
+	        </button>
+	        
+	        <button>
+	            M
+	        </button>
+	            
+	        <button>
+	            G
+	        </button>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* CAMISA</pattern>
+	    <template>
+	        <srai>CAMISA</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* CAMISA *</pattern>
+	    <template>
+	        <srai>CAMISA</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>P</pattern>
+	    <that>LT BUTTON GT P LT SLASH BUTTON GT LT BUTTON GT M LT SLASH BUTTON GT LT BUTTON GT G LT SLASH BUTTON GT</that>
+	    <template>
+	        <condition name="roupa" value="camisa">
+	            <think><set name="tamanho">P</set></think>
+	            <srai>TIPO</srai>
+	        </condition>
+	        
+	         <condition name="roupa" value="false">
+	            <srai>ERROROUPA</srai>
+            </condition>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>TAMANHO P</pattern>
+	    <template>
+	        <srai>P</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* TAMANHO P</pattern>
+	    <template>
+	        <srai>P</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* TAMANHO P *</pattern>
+	    <template>
+	        <srai>P</srai>
+	    </template>
+	</category>
+	
+	
+	<category>
+	    <pattern>M</pattern>
+	    <that>LT BUTTON GT P LT SLASH BUTTON GT LT BUTTON GT M LT SLASH BUTTON GT LT BUTTON GT G LT SLASH BUTTON GT</that>
+	    <template>
+	        <condition name="roupa" value="camisa">
+	            <think><set name="tamanho">M</set></think>
+	            <srai>TIPO</srai>
+	        </condition>
+
+            <condition name="roupa" value="false">
+	            <srai>ERROROUPA</srai>
+            </condition>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>TAMANHO M</pattern>
+	    <template>
+	        <srai>M</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* TAMANHO M</pattern>
+	    <template>
+	        <srai>M</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* TAMANHO M *</pattern>
+	    <template>
+	        <srai>M</srai>
+	    </template>
+	</category>
+	
+	
+	<category>
+	    <pattern>G</pattern>
+	    <that>LT BUTTON GT P LT SLASH BUTTON GT LT BUTTON GT M LT SLASH BUTTON GT LT BUTTON GT G LT SLASH BUTTON GT</that>
+	    <template>
+	        <condition name="roupa" value="camisa">
+	            <think><set name="tamanho">G</set></think>
+	            <srai>TIPO</srai>
+	        </condition>
+	        
+	         <condition name="roupa" value="false">
+	            <srai>ERROROUPA</srai>
+            </condition>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>TAMANHO G</pattern>
+	    <template>
+	        <srai>G</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* TAMANHO G</pattern>
+	    <template>
+	        <srai>G</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* TAMANHO G *</pattern>
+	    <template>
+	        <srai>G</srai>
+	    </template>
+	</category>
+	
+	
+	
+	<category>
+	    <pattern>V</pattern>
+	    <that>PARA A GOLA, TEMOS TRÊS FORMATOS DISPONÍVEIS LT BUTTON GT V LT SLASH BUTTON GT LT BUTTON GT REDONDA LT SLASH BUTTON GT LT BUTTON GT POLO LT SLASH BUTTON GT</that>
+	    <template>
+	        <condition name="roupa" value="camisa">
+	            <think><set name="tipo">gola V</set></think>
+	            <srai>PAGAMENTO</srai>
+            </condition>
+            <condition name="roupa" value="false">
+	            <srai>ERROROUPA</srai>
+            </condition>	    </template>
+	</category>
+	
+	<category>
+	    <pattern>GOLA V</pattern>
+	    <template>
+	        <srai>V</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>GOLA V *</pattern>
+	    <template>
+	        <srai>V</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* GOLA V</pattern>
+	    <template>
+	        <srai>V</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>POLO</pattern>
+	    <that>PARA A GOLA, TEMOS TRÊS FORMATOS DISPONÍVEIS LT BUTTON GT V LT SLASH BUTTON GT LT BUTTON GT REDONDA LT SLASH BUTTON GT LT BUTTON GT POLO LT SLASH BUTTON GT</that>
+	    <template>
+	        <condition name="roupa" value="camisa">
+	            <think><set name="tipo">gola Polo</set></think>
+	            <srai>PAGAMENTO</srai>
+            </condition>
+	        <condition name="roupa" value="false">
+	            <srai>ERROROUPA</srai>
+            </condition>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>GOLA POLO</pattern>
+	    <template>
+	        <srai>POLO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>GOLA POLO *</pattern>
+	    <template>
+	        <srai>POLO</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* GOLA POLO</pattern>
+	    <template>
+	        <srai>POLO</srai>
+	    </template>
+	</category>
+	
+	
+	<category>
+	    <pattern>REDONDA</pattern>
+        <that>PARA A GOLA, TEMOS TRÊS FORMATOS DISPONÍVEIS LT BUTTON GT V LT SLASH BUTTON GT LT BUTTON GT REDONDA LT SLASH BUTTON GT LT BUTTON GT POLO LT SLASH BUTTON GT</that>
+	    <template>
+	        <condition name="roupa" value="camisa">
+	            <think><set name="tipo">gola Redonda</set></think>
+	            <srai>PAGAMENTO</srai>
+            </condition>
+            
+            <condition name="roupa" value="false">
+	            <srai>ERROROUPA</srai>
+            </condition>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>GOLA REDONDA</pattern>
+	    <template>
+	        <srai>REDONDA</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>GOLA REDONDA *</pattern>
+	    <template>
+	        <srai>REDONDA</srai>
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>* GOLA REDONDA</pattern>
+	    <template>
+	        <srai>REDONDA</srai>
+	    </template>
+	</category>
+</topic>
+</aiml>
